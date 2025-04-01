@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE social-network SYSTEM "social-network.dtd">
+<social-network>
+    <users>
+        <user id="user-1" name="Jean Marc" email="jm@example.com">
+            <description>
+                Ma Bio!
+                Blablabla
+            </description>
+        </user>
+        <user id="user-2" name="Tom"></user>
+    </users>
+    <posts>
+        <post id="post-1" owner="user-1" parent="">
+            <content>
+                Mon post!
+                blabla
+            </content>
+            <likes>
+                <like id="like-user-1" user="user-1">
+                </like>
+                <like id="like-user-2" user="user-2">
+                </like>
+            </likes>
+        </post>
+        <post id="post-2" owner="user-1" parent="">
+            <content>
+                Mon post!
+                blabla
+            </content>
+            <likes>
+                <like id="like-user-1" user="user-1">
+                </like>
+                <like id="like-user-2" user="user-2">
+                </like>
+            </likes>
+        </post>
+    </posts>
+</social-network>

@@ -1,0 +1,13 @@
+<!ELEMENT social-network (users, posts)>
+
+<!ELEMENT users (user*)>
+<!ELEMENT posts (post*)>
+
+<!ELEMENT user (description?)>
+
+<!ATTLIST user id ID #REQUIRED>
+<!ATTLIST user name CDATA #REQUIRED>
+<!ATTLIST user email CDATA #IMPLIED>
+
+<!ELEMENT description (#PCDATA) >
+
