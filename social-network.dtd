@@ -3,11 +3,31 @@
 <!ELEMENT users (user*)>
 <!ELEMENT posts (post*)>
 
-<!ELEMENT user (description?)>
+<!ELEMENT user (description?, attachments?)>
 
 <!ATTLIST user id ID #REQUIRED>
 <!ATTLIST user name CDATA #REQUIRED>
 <!ATTLIST user email CDATA #IMPLIED>
 
-<!ELEMENT description (#PCDATA) >
+<!ELEMENT description (#PCDATA)>
 
+<!ELEMENT post (content?, likes?, attachments?)>
+
+<!ATTLIST post id ID #REQUIRED>
+<!ATTLIST post owner IDREF #REQUIRED>
+<!ATTLIST post parent IDREF #IMPLIED>
+
+<!ELEMENT likes (like*) >
+<!ELEMENT like EMPTY >
+<!ATTLIST like id ID #REQUIRED>
+<!ATTLIST like user IDREF #REQUIRED>
+
+<!ELEMENT content (#PCDATA)>
+
+<!ELEMENT attachments (attachment*)>
+
+<!ELEMENT attachment EMPTY>
+<!ATTLIST attachment id ID #REQUIRED>
+<!ATTLIST attachment type (image|post) #REQUIRED>
+<!ATTLIST attachment link CDATA #IMPLIED>
+<!ATTLIST attachment post IDREF #IMPLIED>
